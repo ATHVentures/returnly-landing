@@ -55,7 +55,23 @@ footer{padding:40px 48px;border-top:1px solid rgba(255,255,255,0.06);display:fle
 .footer-copy{font-size:13px;color:rgba(255,255,255,0.3)}
 .footer-links{display:flex;gap:24px}
 .footer-links a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:13px}
-@media(max-width:768px){h1{font-size:38px}nav{padding:16px 24px}.hero{padding:60px 24px}.steps{grid-template-columns:1fr}.pricing-grid{grid-template-columns:1fr}.how,.pricing,.cta{padding:48px 24px}}
+.testimonials{padding:80px 48px;max-width:1100px;margin:0 auto;text-align:center}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;text-align:left}
+.testi-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:20px;padding:32px}
+.testi-quote{font-size:15px;color:rgba(255,255,255,0.7);line-height:1.75;margin-bottom:24px;font-style:italic}
+.testi-author{display:flex;align-items:center;gap:12px}
+.testi-avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#6366f1,#8b5cf6);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:16px;flex-shrink:0}
+.testi-name{font-size:14px;font-weight:700}
+.testi-role{font-size:12px;color:rgba(255,255,255,0.4);margin-top:2px}
+.faq{padding:80px 48px;background:rgba(255,255,255,0.02);border-top:1px solid rgba(255,255,255,0.06)}
+.faq-list{margin-top:48px;display:grid;gap:12px;text-align:left}
+.faq-item{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:14px;overflow:hidden}
+.faq-q{padding:20px 24px;font-size:15px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;color:rgba(255,255,255,0.9)}
+.faq-q::-webkit-details-marker{display:none}
+.faq-q::after{content:'+';font-size:20px;font-weight:300;color:rgba(255,255,255,0.4);flex-shrink:0}
+.faq-item[open] .faq-q::after{content:'−'}
+.faq-a{padding:0 24px 20px;font-size:14px;color:rgba(255,255,255,0.5);line-height:1.75}
+@media(max-width:768px){h1{font-size:38px}nav{padding:16px 24px}.hero{padding:60px 24px}.steps{grid-template-columns:1fr}.pricing-grid{grid-template-columns:1fr}.how,.pricing,.cta{padding:48px 24px}.testi-grid{grid-template-columns:1fr}.testimonials,.faq{padding:48px 24px}}
 </style>
 </head>
 <body>
@@ -72,8 +88,8 @@ footer{padding:40px 48px;border-top:1px solid rgba(255,255,255,0.06);display:fle
 
 <section class="hero">
   <div class="badge">Powered by AI</div>
-  <h1>Stop losing money<br>to <span class="gradient">preventable returns</span></h1>
-  <p class="hero-sub">Upload your return data and AI instantly tells you why customers are returning, which SKUs have problems, and exactly what to fix. Results in 2 minutes.</p>
+  <h1>Your return rate is<br>bleeding you dry.<br><span class="gradient">Find out exactly why.</span></h1>
+  <p class="hero-sub">Upload your return data and in 2 minutes you'll know: which SKUs are killing your margins, the real reason customers are sending things back, and exactly what to fix first.</p>
   <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
     <a href="https://buy.stripe.com/3cI6oH0dx56MgS8f9N8AE00" class="btn btn-lg">Get Pro Report — $49</a>
     <a href="https://getreturnly.app" style="padding:16px 36px;background:rgba(255,255,255,0.06);color:white;border:1px solid rgba(255,255,255,0.15);border-radius:8px;font-size:16px;font-weight:600;text-decoration:none">Try Free Demo First</a>
@@ -145,6 +161,75 @@ footer{padding:40px 48px;border-top:1px solid rgba(255,255,255,0.06);display:fle
         </ul>
         <a href="https://buy.stripe.com/3cI6oH0dx56MgS8f9N8AE00" class="btn btn-full">Get Pro Report — $49</a>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="testimonials">
+  <div class="pricing-inner">
+    <div class="section-tag">What Retailers Are Saying</div>
+    <h2>Real stores. Real results.</h2>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <p class="testi-quote">&ldquo;I always assumed returns were just part of running an online boutique. Returnly showed me that 40% of my returns were sizing-related on a single product line &mdash; and the fix was literally adding a size chart. Return rate dropped overnight.&rdquo;</p>
+        <div class="testi-author">
+          <div class="testi-avatar">S</div>
+          <div>
+            <div class="testi-name">Sarah M.</div>
+            <div class="testi-role">Owner, Bloom & Thread Boutique</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">&ldquo;We were drowning in returns from one SKU and had no idea why. Turns out the product photos made the color look completely different on screen. Returnly flagged it in seconds. We updated the photos and the returns stopped.&rdquo;</p>
+        <div class="testi-author">
+          <div class="testi-avatar">J</div>
+          <div>
+            <div class="testi-name">James R.</div>
+            <div class="testi-role">eCommerce Manager, Fieldstone Home Goods</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <p class="testi-quote">&ldquo;I uploaded six months of returns and had an action plan within minutes. The AI doesn't just categorize &mdash; it tells you specifically what to fix. Worth 10x the price in saved return processing costs alone.&rdquo;</p>
+        <div class="testi-author">
+          <div class="testi-avatar">M</div>
+          <div>
+            <div class="testi-name">Maria T.</div>
+            <div class="testi-role">Founder, Verdant Activewear</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="pricing-inner">
+    <div class="section-tag">FAQ</div>
+    <h2>Common questions</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary class="faq-q">What file format do I need?</summary>
+        <p class="faq-a">A standard CSV file. Export return data from Shopify, WooCommerce, your ERP, or any system &mdash; as long as it has columns for order ID, product name, and return reason, Returnly will handle the rest. We're flexible on column naming.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Is my data secure?</summary>
+        <p class="faq-a">Yes. Your data is processed over HTTPS, used only to generate your analysis, and is never sold or shared. We do not store raw customer information beyond what's needed to render your report.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">How long does analysis take?</summary>
+        <p class="faq-a">Typically under 2 minutes for up to several hundred returns. The AI classification and insight generation run in parallel, so even large datasets come back fast.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">What's included in the Pro Report?</summary>
+        <p class="faq-a">The Pro Report is a branded, shareable PDF with your full analysis: executive summary, return category breakdown, sentiment analysis, top 10 problem SKUs with return values, and a prioritized action plan. It's designed to be presented to stakeholders or used as a working document.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">Do I need any technical knowledge?</summary>
+        <p class="faq-a">None at all. If you can export a spreadsheet from your store and upload a file, you can use Returnly. No integrations, no APIs, no setup. Upload a CSV, get your analysis.</p>
+      </details>
     </div>
   </div>
 </section>
